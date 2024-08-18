@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Segunda Actividad</title>
+</head>
+<body>
+<canvas id="Canvas" width="300" height="300"></canvas>
+
+<script>
+    var canvas = document.getElementById("Canvas");
+    var ctx = canvas.getContext("2d");
+
+    // CUADRO ROJO
+    ctx.fillStyle = "rgba(255, 99, 71, 0.7)";
+    ctx.fillRect(20, 20, 70, 70);
+
+    // CUADRO AZUL
+    ctx.fillStyle = "rgba(173, 216, 230, 0.7)";
+    ctx.fillRect(60, 60, 70, 70);
+
+    // CUADRO VERDE
+    ctx.fillStyle = "rgba(0, 128, 0, 1.0)";
+    ctx.fillRect(100, 100, 70, 70);
+
+    // PRIMER TRIÁNGULO
+    ctx.beginPath();
+    ctx.moveTo(180, 150); 
+    ctx.lineTo(250, 90); 
+    ctx.lineTo(200, 300); 
+    ctx.closePath(); 
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+    ctx.fillStyle = "rgba(173, 216, 230, 0.7)";
+    ctx.fill();
+
+    // CUADRADO TRANSPARENTE
+    ctx.beginPath();
+    ctx.rect(160, 160, 70, 70);
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+    ctx.stroke();
+
+    // SEGUNDO CUADRADO ROJO
+    ctx.beginPath();
+    ctx.rect(220, 220, 70, 70);
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+
+</script>
+
+</body>
+</html>
+
+
+
